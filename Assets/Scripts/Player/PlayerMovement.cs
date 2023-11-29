@@ -10,11 +10,15 @@ public class PlayerMovement : MonoBehaviour
     private PlayerActions actions;
     private Rigidbody2D rb2D;
     private Vector2 moveDirection;
+    private Animator animator;
+    private readonly int moveX = Animator.StringToHash("MoveX");
+    private readonly int moveY = Animator.StringToHash("MoveY");
 
     private void Awake()
     {
         actions = new PlayerActions();
         rb2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -35,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
     private void ReadMovement()
     {
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized;
+        if (moveDirection == Vector2.zero)
+            return;
+        // If moveDirection vector is equals to zero (that's mean our character not moving) don't do anything, just return and go to the next function/code block
+
+        // Update Parameters
+        animator.SetFloat(moveX, moveDirection.x);
+        animator.SetFloat(moveY, moveDirection.y);
     }
 
     private void OnEnable()

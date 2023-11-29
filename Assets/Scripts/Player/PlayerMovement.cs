@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private readonly int moveX = Animator.StringToHash("MoveX");
     private readonly int moveY = Animator.StringToHash("MoveY");
+    private readonly int moving = Animator.StringToHash("Moving");
 
     private void Awake()
     {
@@ -40,10 +41,14 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized;
         if (moveDirection == Vector2.zero)
+        {
+            animator.SetBool(moving, false);
             return;
-        // If moveDirection vector is equals to zero (that's mean our character not moving) don't do anything, just return and go to the next function/code block
+        }
+   
 
         // Update Parameters
+        animator.SetBool(moving, true);
         animator.SetFloat(moveX, moveDirection.x);
         animator.SetFloat(moveY, moveDirection.y);
     }

@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public readonly int moveX = Animator.StringToHash("MoveX");
+    public readonly int moveY = Animator.StringToHash("MoveY");
+    private readonly int moving = Animator.StringToHash("Moving");
+
+    // New parameter for dead animation
+    private readonly int dead = Animator.StringToHash("Dead");
+
+    private Animator animator;
+
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetDeadAnimation()
     {
-        
+        animator.SetTrigger(dead);
+    }
+
+    public void SetMoveBoolTransition(bool value)
+    {
+        animator.SetBool(moving, value);
+    }
+
+    public void setMoveAnimation(Vector2 dir)
+    {
+        animator.SetFloat(moveX, dir.x);
+        animator.SetFloat(moveY, dir.y);
     }
 }

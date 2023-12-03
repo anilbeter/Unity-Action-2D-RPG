@@ -11,9 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private PlayerActions actions;
     private Rigidbody2D rb2D;
     private Vector2 moveDirection;
+    private Player player;
 
     private void Awake()
     {
+        player = GetComponent<Player>();
         actions = new PlayerActions();
         rb2D = GetComponent<Rigidbody2D>();
         playerAnimations = GetComponent<PlayerAnimations>();
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (player.Stats.Health <= 0f) return;
         rb2D.MovePosition(rb2D.position + moveDirection * (speed * Time.fixedDeltaTime));
     }
 

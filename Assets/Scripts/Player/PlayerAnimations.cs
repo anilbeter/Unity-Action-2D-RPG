@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    public readonly int moveX = Animator.StringToHash("MoveX");
-    public readonly int moveY = Animator.StringToHash("MoveY");
+    private readonly int moveX = Animator.StringToHash("MoveX");
+    private readonly int moveY = Animator.StringToHash("MoveY");
     private readonly int moving = Animator.StringToHash("Moving");
 
     // New parameter for dead animation

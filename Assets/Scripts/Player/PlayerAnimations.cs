@@ -8,8 +8,7 @@ public class PlayerAnimations : MonoBehaviour
     private readonly int moveX = Animator.StringToHash("MoveX");
     private readonly int moveY = Animator.StringToHash("MoveY");
     private readonly int moving = Animator.StringToHash("Moving");
-
-    // New parameter for dead animation
+    private readonly int revive = Animator.StringToHash("Revive");
     private readonly int dead = Animator.StringToHash("Dead");
 
     private Animator animator;

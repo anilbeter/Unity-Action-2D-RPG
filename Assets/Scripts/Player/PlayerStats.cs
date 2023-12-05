@@ -11,4 +11,8 @@ public class PlayerStats : ScriptableObject
     [Header("Health")]
     public float Health;
     public float MaxHealth;
+
+    [Header("Mana")]
+    public float mana;
+    public float maxMana;
 }

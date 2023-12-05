@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   Level: 1
-  Health: 10
-  MaxHealth: 10
+  health: 10
+  maxHealth: 10
+  mana: 20
+  maxMana: 20

@@ -28,9 +28,15 @@ public class PlayerAnimations : MonoBehaviour
         animator.SetBool(moving, value);
     }
 
-    public void setMoveAnimation(Vector2 dir)
+    public void SetMoveAnimation(Vector2 dir)
     {
         animator.SetFloat(moveX, dir.x);
         animator.SetFloat(moveY, dir.y);
+    }
+
+    public void ResetPlayer()
+    {
+        SetMoveAnimation(Vector2.down);
+        animator.SetTrigger(revive);
     }
 }

@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
    
 
         playerAnimations.SetMoveBoolTransition(true);
-        playerAnimations.setMoveAnimation(moveDirection);
+        playerAnimations.SetMoveAnimation(moveDirection);
  
     }
 

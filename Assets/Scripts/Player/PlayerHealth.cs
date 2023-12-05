@@ -23,8 +23,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     }
     public void TakeDamage(float amount)
     {
-        stats.Health -= amount;
-        if (stats.Health <= 0f)
+        stats.health -= amount;
+        if (stats.health <= 0f)
         {
             PlayerDead();
         }

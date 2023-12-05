@@ -7,18 +7,6 @@ public class PlayerMana : MonoBehaviour
 
     public void UseMana(float amount)
     {
-        /*
-        if (stats.mana >= amount)
-        {
-            stats.mana -= amount;
-            if (stats.mana <= 0f)
-            {
-                stats.mana = 0f;
-            }
-        }
-        */
-
-        // Shorter way:
-        stats.mana = Mathf.Max(stats.mana -= amount, 0f); // 2 değer girdim, büyük olanı vericek
+        stats.mana = Mathf.Max(stats.mana -= amount, 0f);
     }
 }

@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (player.Stats.Health <= 0f) return;
+        if (player.Stats.health <= 0f) return;
         rb2D.MovePosition(rb2D.position + moveDirection * (speed * Time.fixedDeltaTime));
     }
 

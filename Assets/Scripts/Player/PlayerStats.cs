@@ -18,7 +18,7 @@ public class PlayerStats : ScriptableObject
     [Header("EXP")]
     public float currentExp;
     public float nextLevelExp;
-    public float initialNextLevelExp;
+    public float initialNextLevelExp; // only for reach to lvl 2, after lvl 2 I'll only use nextLevelExp variable
     [Range(1f, 100f)] public float expMultiplier;
 
     public void ResetPlayer()

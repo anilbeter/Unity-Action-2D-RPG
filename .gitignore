@@ -11,3 +11,5 @@ UserSettings/
 *.csproj
 /Library/ArtifactDB
 Assets/Sprites
+Assets/*.meta
+TextMesh Pro/

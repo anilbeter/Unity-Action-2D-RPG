@@ -3,7 +3,15 @@ guid: 67602290f7d10014688355e53c8e62c4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - stats: {fileID: 11400000, guid: 9f7bd9b5241f73f4eb4b1819a3991ab7, type: 2}
+  - healthBar: {instanceID: 0}
+  - manaBar: {instanceID: 0}
+  - expBar: {instanceID: 0}
+  - levelTMP: {instanceID: 0}
+  - healthTMP: {instanceID: 0}
+  - manaTMP: {instanceID: 0}
+  - expTMP: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
